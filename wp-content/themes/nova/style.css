@@ -1,0 +1,95 @@
+/* 
+Theme Name: Updraft 
+Theme URI: https://updraftplus.com 
+Author: UpdraftPlus 
+Author URI: https://updraftplus.com 
+Description: The custom theme built for the website. 
+Version: 1.0 
+License: GNU General Public License v2 or later 
+License URI: https://www.gnu.org/licenses/gpl-2.0.html 
+Text Domain: updraft 
+*/ 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0a0a0a; /* Tmavá jako himálajská noc */
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg'); /* Nahraď fotkou vrcholu */
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    color: #00bfff; /* Tyrkys pro ledovec */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.facts {
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.fact-item {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: #00bfff20;
+    border-left: 4px solid #00bfff;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1a1a1a;
+    color: #888;
+}
+
+/* Responzivní – fešácké i na mobilu */
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.5rem; }
+    .section { grid-template-columns: 1fr; }
+}
