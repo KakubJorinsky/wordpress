@@ -1,7 +1,7 @@
 /* 
-Theme Name: Updraft 
+Theme Name: Šiša Pangma 
 Theme URI: https://updraftplus.com 
-Author: UpdraftPlus 
+Author: Kakub 
 Author URI: https://updraftplus.com 
 Description: The custom theme built for the website. 
 Version: 1.0 
@@ -13,14 +13,14 @@ Text Domain: updraft
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #0a0a0a; /* Tmavá jako himálajská noc */
+    background-color: #0a0a0a;
     color: #f0f0f0;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg'); /* Nahraď fotkou vrcholu */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/wp-content/themes/nova/img/novy_styl.jpg');
     background-size: cover;
     height: 60vh;
     display: flex;
@@ -32,7 +32,7 @@ header {
 .hero-title {
     font-family: 'Montserrat', sans-serif;
     font-size: 4rem;
-    color: #00bfff; /* Tyrkys pro ledovec */
+    color: #00bfff;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 
@@ -88,7 +88,6 @@ footer {
     color: #888;
 }
 
-/* Responzivní – fešácké i na mobilu */
 @media (max-width: 768px) {
     .hero-title { font-size: 2.5rem; }
     .section { grid-template-columns: 1fr; }
