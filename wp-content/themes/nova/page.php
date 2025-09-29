@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php $theme_url = get_template_directory_uri(); ?>
 <html <?php language_attributes();?>>
     <head>
         <meta charset="<?php bloginfo( 'charset' );?>">
@@ -12,6 +13,8 @@
             }
             ?>
         </title>
+        <script src="<?php $theme_url?>/script/script.js"></script>
+        <?php wp_head()?>
     </head>
     <body>
     <?php
@@ -20,27 +23,7 @@
 
         <main id="primary" class="site-main">
             <?php
-            while (have_posts()) :
-                the_post();
-                ?>
-                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                    <header class="entry-header">
-                        <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-                    </header>
-
-                    <div class="entry-content">
-                        <?php
-                        the_content();
-
-                        wp_link_pages(array(
-                            'before' => '<div class="page-links">',
-                            'after'  => '</div>',
-                        ));
-                        ?>
-                    </div>
-                </article>
-            <?php
-            endwhile;
+                the_content();
             ?>
         </main>
 

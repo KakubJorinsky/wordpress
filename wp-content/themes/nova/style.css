@@ -9,86 +9,111 @@ License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html 
 Text Domain: updraft 
 */ 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #0a0a0a;
-    color: #f0f0f0;
     margin: 0;
     padding: 0;
-}
-
-header {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/wp-content/themes/nova/img/novy_styl.jpg');
-    background-size: cover;
-    height: 60vh;
+  }
+  header {
+    width: 100%;
+    height: 100px;
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    position: relative;
+    background-color: none;
+  }
+  header .wrapper {
+    max-width: 1300px;
+    margin: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.hero-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 4rem;
-    color: #00bfff;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-}
-
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-.section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
-}
-
-.facts {
-    background: #1a1a1a;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-.fact-item {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    background: #00bfff20;
-    border-left: 4px solid #00bfff;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-}
-
-.gallery img {
+    height: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+    background: #fff;
+    z-index: 10;
+    position: relative;
+  }
+  header .wrapper-logo {
+    width: 50px;
+    height: 50px;
+  }
+  header .wrapper-logo img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background: #1a1a1a;
-    color: #888;
-}
-
-@media (max-width: 768px) {
-    .hero-title { font-size: 2.5rem; }
-    .section { grid-template-columns: 1fr; }
-}
+    height: 100%;
+  }
+  header .wrapper-hamburger {
+    width: 50px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: transform ease 1s;
+  }
+  header .wrapper-hamburger span {
+    transition: transform ease 1s;
+    transition: ease 1s;
+    border: 2px solid #000;
+  }
+  @media only screen and (min-width: 768px) {
+    header .wrapper-hamburger {
+      display: none;
+    }
+  }
+  header .wrapper .is-active {
+    transform: rotate(360deg);
+  }
+  header .wrapper .is-active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 13px);
+  }
+  header .wrapper .is-active span:nth-child(2) {
+    opacity: 0;
+  }
+  header .wrapper .is-active span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -13px);
+  }
+  header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-350px);
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    transition: transform ease 1s;
+  }
+  header nav a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: ease 0.3s;
+  }
+  @media only screen and (min-width: 768px) {
+    header nav {
+      z-index: 10;
+      flex-direction: row;
+      justify-content: flex-end;
+      padding-right: 60px;
+      transform: translate(-50%, -150%);
+      max-width: 1300px;
+      background: none;
+      box-shadow: none;
+    }
+    header nav a:hover {
+      color: #f00;
+    }
+  }
+  header .is-open {
+    transform: translateX(-50%) translateY(0px);
+  }
