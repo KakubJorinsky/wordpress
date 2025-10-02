@@ -14,6 +14,8 @@
             ?>
         </title>
         <script src="<?php $theme_url?>/script/script.js"></script>
+        <link rel="stylesheet" href="<?php $theme_url  ?>/style.css">
+        <link rel="stylesheet" href="<?php $theme_url  ?>/style/footer.css">
         <?php wp_head()?>
     </head>
     <body>
