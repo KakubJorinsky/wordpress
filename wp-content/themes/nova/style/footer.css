@@ -20,23 +20,23 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    width: 200%; /* Extended width for seamless looping */
+    width: 200%;
     height: 100%;
 }
 
 .wave1 {
-    fill: #2c3e50; /* Darker wave in front */
+    fill: #2c3e50;
     z-index: 3;
     opacity: 1;
     animation: wave 12s linear infinite;
 }
 
 .wave2 {
-    fill: rgb(86, 116, 184); /* Lighter wave behind */
+    fill: rgb(86, 116, 184);
     z-index: 2;
     opacity: 0.6;
     animation: wave 12s linear infinite;
-    animation-delay: -4s; /* Offset for wave2 to follow wave1 */
+    animation-delay: -4s;
 }
 
 @keyframes wave {
