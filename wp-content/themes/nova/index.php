@@ -24,7 +24,6 @@ get_header(); // Načte header.php
             <?php
         endwhile;
 
-        // Navigace mezi příspěvky
         the_posts_navigation();
 
     else :

@@ -13,9 +13,9 @@
             }
             ?>
         </title>
-        <script src="<?php $theme_url?>/script/script.js"></script>
-        <link rel="stylesheet" href="<?php $theme_url  ?>/style.css">
-        <link rel="stylesheet" href="<?php $theme_url  ?>/style/footer.css">
+        <script src="<?php echo esc_url( get_template_directory_uri() . '/script/script.js' ); ?>" defer></script>
+        <link rel="stylesheet" href="<?= $theme_url  ?>./style.css">
+        <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() . '/style/footer.css' ); ?>">
         <?php wp_head()?>
     </head>
     <body>
